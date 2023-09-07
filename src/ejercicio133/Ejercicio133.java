@@ -16,9 +16,9 @@ public class Ejercicio133 {
         while (!salir) {
             try {
                 String opcionP = "";
-                opcionP = JOptionPane.showInputDialog("******PROGRAMA EMPRESA****** \n1.- Ingresar Trabajador \n "
-                        + "2.- Asignar Tarjeta\n 3.- Comprar/Gastar \n "
-                        + "4.- Salir\nIntroduce una opcion: ");
+                opcionP = JOptionPane.showInputDialog("******PROGRAMA EMPRESA****** \n1) Ingresar Trabajador \n "
+                        + "2) Asignar Tarjeta\n 3) Comprar/Gastar \n "
+                        + "4) Salir\nIntroduce una opcion: ");
                 int opciones = Integer.parseInt(opcionP);
                 switch (opciones) {
                     case 1:
@@ -27,18 +27,18 @@ public class Ejercicio133 {
                     case 2:
                         StringBuilder listacaso2 = new StringBuilder();
                         for (Trabajador trab : listaTrabajadores) {                            
-                            listacaso2.append(listaTrabajadores.indexOf(trab) + ") " + trab.toString()); 
-                            String indexTrabajador = JOptionPane.showInputDialog("LISTA DE TRABAJADORES DISPONIBLES: \n" + listacaso2 +"\nIngresa la opcion segun trabajador:  ");
+                            listacaso2.append("\n" + listaTrabajadores.indexOf(trab) + ") " + trab.toString()); 
+                            
+                        }                      
+                        String indexTrabajador = JOptionPane.showInputDialog("LISTA DE TRABAJADORES DISPONIBLES: \n" + listacaso2 +"\nIngresa la opcion segun trabajador:  ");
                             int indexInt = Integer.parseInt(indexTrabajador);
                             listaTarjetas.add(crearTarjeta(indexInt, listaTrabajadores));
-                        }                      
-
                         break;
 
                     case 3:
                         StringBuilder listacaso3 = new StringBuilder();
                         for (Trabajador trab : listaTrabajadores) {
-                            listacaso3.append(listaTrabajadores.indexOf(trab) + ") " + trab.toString());
+                            listacaso3.append("\n" + listaTrabajadores.indexOf(trab) + ") " + trab.toString());
                         }            
                         String indiceTrabajador = JOptionPane.showInputDialog(listacaso3 + "\n Ingresa la opcion de la persona que comprará:  ");
                        
