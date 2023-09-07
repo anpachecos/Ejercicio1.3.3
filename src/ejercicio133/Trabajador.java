@@ -14,10 +14,7 @@ public class Trabajador {
     }
 
     public Trabajador() {
-    }
- 
-    
-    
+    }  
     //Validar rut, nombre y dv
     public static Trabajador crearTrabajador() {
         String nom = "";
